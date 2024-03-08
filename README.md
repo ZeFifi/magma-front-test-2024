@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://www.magma.app/" target="_blank">
-    <img alt="Magma logo" width="200" src="https://magma-assets.s3.eu-west-3.amazonaws.com/magma-logo.svg">
+    <img alt="Magma logo" width="200" src="https://avatars.githubusercontent.com/u/59666181?s=200&v=4">
   </a>
   <br>
   <h1 align="center"> Magma Front Test 2024 </h1>
