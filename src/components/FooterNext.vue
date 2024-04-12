@@ -78,17 +78,17 @@ const onContinue = async () => {
     >
       <BaseButton
         v-if="isAmbassadorsStep"
-        @click="router.push('/sign-up/organization')"
         :text="$t('generic.back')"
         state="scdr"
         icon="arrow-left"
+        @click="router.push('/sign-up/organization')"
       />
       <BaseButton
-        @click="onContinue"
         :text="$t('generic.continue')"
         state="scdr"
         icon="arrow-right"
         :disabled="isDisabled"
+        @click="onContinue"
       />
     </div>
   </footer>

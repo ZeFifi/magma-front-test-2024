@@ -99,10 +99,10 @@ const updateAmbassadorEmail = (email: string) => {
           <div><img src="/img/icons/users-plus.png" /></div>
           <div>
             <BaseIcon
-              @click="$emit('close')"
               class="cursor-pointer"
               icon="close"
               color="#94A3B8"
+              @click="$emit('close')"
             />
           </div>
         </div>
@@ -112,43 +112,43 @@ const updateAmbassadorEmail = (email: string) => {
         <div class="flex justify-between mb-4">
           <FieldInput
             v-model="ambassadorFirstname"
-            @update:modelValue="updateAmbassadorFirstname"
             class="w-[208px]"
             :label="$t('generic.firstname')"
             placeholder="Nelson"
             required
+            @update:model-value="updateAmbassadorFirstname"
           />
           <FieldInput
             v-model="ambassadorLastname"
-            @update:modelValue="updateAmbassadorLastname"
             class="w-[208px]"
             :label="$t('generic.lastname')"
             placeholder="Mandela"
             required
+            @update:model-value="updateAmbassadorLastname"
           />
         </div>
         <div class="mb-4">
           <FieldInput
             v-model="ambassadorEmail"
-            @update:modelValue="updateAmbassadorEmail"
             :label="$t('generic.email')"
             role="email"
             icon="mail"
             placeholder="nelson.mandela@gmail.com"
             required
+            @update:model-value="updateAmbassadorEmail"
           />
         </div>
         <div class="flex justify-end gap-2">
           <BaseButton
-            @click="$emit('close')"
             :text="$t('generic.cancel')"
             state="scdr"
+            @click="$emit('close')"
           />
           <BaseButton
-            @click="onAddAmbassador"
             :text="$t('generic.add')"
             state="trtr"
             :disabled="isDisabled"
+            @click="onAddAmbassador"
           />
         </div>
       </div>

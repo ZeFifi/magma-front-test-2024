@@ -51,9 +51,9 @@ const deleteAmbassador = async (ambassadorId: number) => {
   <div class="border border-subtle rounded-lg">
     <ul id="ambassadors-list">
       <li
+        v-for="ambassador in props.ambassadors"
         :key="ambassador.id"
         class="flex justify-between items-center text-sm p-[14px] border-b border-subtle last:border-none"
-        v-for="ambassador in props.ambassadors"
       >
         <div class="flex items-center gap-3">
           <NoAvatar

@@ -42,7 +42,7 @@ declare module "vue3-mq" {
   export function useMq(): MqState;
   export function updateBreakpoints({
     breakpoints,
-    preset,
+    preset
   }: {
     breakpoints: Breakpoints;
     preset: Preset;
@@ -58,7 +58,7 @@ declare module "vue3-mq" {
         defaultBreakpoint,
         defaultOrientation,
         defaultMotion,
-        defaultTheme,
+        defaultTheme
       }: {
         preset?: Preset;
         breakpoints: Breakpoints;

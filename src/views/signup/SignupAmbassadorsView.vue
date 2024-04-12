@@ -28,7 +28,7 @@ const toggleModal = () => {
 };
 
 // States
-let isModalOpen = ref(false);
+const isModalOpen = ref(false);
 </script>
 
 <template>
@@ -42,7 +42,7 @@ let isModalOpen = ref(false);
         <AddAmbassadorsBlock
           class="mb-10"
           :message="$t('signupAmbassadorsView.description')"
-          :toggleModal="toggleModal"
+          :toggle-modal="toggleModal"
           :ambassadors="ambassadors"
         />
         <AmbassadorsList v-if="hasAmbassadors()" :ambassadors="ambassadors" />

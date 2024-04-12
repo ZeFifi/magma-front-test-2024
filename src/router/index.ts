@@ -32,9 +32,9 @@ const router = createRouter({
           path: "ambassadors",
           name: "signup-ambassadors",
           component: SignupAmbassadorsView
-        },
+        }
       ]
-    },
+    }
   ]
 });
 

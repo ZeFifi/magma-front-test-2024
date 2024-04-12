@@ -45,30 +45,30 @@ const updateOrganizationLogo = (logo: File) => {
       <div class="flex flex-col gap-4 mb-10">
         <FieldInput
           v-model="organizationName"
-          @update:modelValue="updateOrganizationName"
           :label="$t('signupOrganizationView.form.organization')"
           placeholder="Acme Inc."
           required
+          @update:model-value="updateOrganizationName"
         />
         <FieldInput
           v-model="organizationWebsite"
-          @update:modelValue="updateOrganizationWebsite"
           :label="$t('generic.website')"
           placeholder="https://acme.com"
           required
+          @update:model-value="updateOrganizationWebsite"
         />
         <FieldAvatarUploader
-          v-model="organizationProfilePicture"
-          @update:modelValue="updateOrganizationLogo"
           :id="'avatar-uploader'"
+          v-model="organizationProfilePicture"
           :label="$t('generic.logo')"
           :description="$t('signupProfileView.form.avatar.description')"
           :cta="$t('signupProfileView.form.avatar.cta')"
+          @update:model-value="updateOrganizationLogo"
         />
       </div>
       <OrganizationPreviewIllustration
-        :organizationName="signupStore.organizationName"
-        :organizationProfilePictureUrl="organizationProfilePictureUrl || ''"
+        :organization-name="signupStore.organizationName"
+        :organization-profile-picture-url="organizationProfilePictureUrl || ''"
       />
     </div>
   </div>
