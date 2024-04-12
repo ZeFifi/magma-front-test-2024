@@ -24,10 +24,13 @@ const props = defineProps({
   <div
     class="flex justify-between gap-8 aside-gradient text-white rounded-lg border-border-on-emphasis px-6 py-7 shadow-[0px_0px_0px_1px_rgba(6,16,204,0.76),0px_1px_2px_0px_rgba(14,16,56,0.40)]"
   >
-    <div>
-      <span class="text-5xl mr-1">{{ ambassadors.length }}</span>
-      <span class="text-xl text-background-brand-disabled mr-1">/</span>
-      <span class="text-xl text-background-brand-disabled">5</span>
+    <div class="relative">
+      <img class="relative" src="/img/ring.svg" alt="progress-ring" />
+      <div class="absolute left-5 bottom-6">
+        <span class="text-5xl mr-1">{{ ambassadors.length }}</span>
+        <span class="text-xl text-background-brand-disabled mr-1">/</span>
+        <span class="text-xl text-background-brand-disabled">5</span>
+      </div>
     </div>
     <div>
       <p class="font-medium text-sm mb-4">{{ props.message }}</p>
