@@ -67,7 +67,7 @@ const updateOrganizationLogo = (logo: File) => {
         />
       </div>
       <OrganizationPreviewIllustration
-        :organizationName="organizationName"
+        :organizationName="signupStore.organizationName"
         :organizationProfilePictureUrl="organizationProfilePictureUrl || ''"
       />
     </div>
