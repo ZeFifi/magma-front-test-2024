@@ -65,27 +65,31 @@ const onContinue = async () => {
 
 <template>
   <footer
-    :class="[
-      'absolute flex h-[126px] bottom-0 bg-white w-full border-t border-subtle pt-10 pr-10 pb-10 pl-[536px]',
-      {
-        'justify-between': isAmbassadorsStep,
-        'justify-end': !isAmbassadorsStep
-      }
-    ]"
+    class="fixed w-[calc(100%-496px)] h-[126px] bottom-0 bg-white border-t border-subtle p-10"
   >
-    <BaseButton
-      v-if="isAmbassadorsStep"
-      @click="router.push('/sign-up/organization')"
-      :text="$t('generic.back')"
-      state="scdr"
-      icon="arrow-left"
-    />
-    <BaseButton
-      @click="onContinue"
-      :text="$t('generic.continue')"
-      state="scdr"
-      icon="arrow-right"
-      :disabled="isDisabled"
-    />
+    <div
+      :class="[
+        'flex',
+        {
+          'justify-between': isAmbassadorsStep,
+          'justify-end': !isAmbassadorsStep
+        }
+      ]"
+    >
+      <BaseButton
+        v-if="isAmbassadorsStep"
+        @click="router.push('/sign-up/organization')"
+        :text="$t('generic.back')"
+        state="scdr"
+        icon="arrow-left"
+      />
+      <BaseButton
+        @click="onContinue"
+        :text="$t('generic.continue')"
+        state="scdr"
+        icon="arrow-right"
+        :disabled="isDisabled"
+      />
+    </div>
   </footer>
 </template>

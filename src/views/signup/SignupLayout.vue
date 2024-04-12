@@ -10,12 +10,14 @@ const route = useRoute();
 </script>
 
 <template>
-  <div :class="[{ flex: true }]">
+  <div class="flex">
     <SignupSidebar />
-    <template v-if="route.path === '/sign-up/organization'">
-      <SignupOrganizationView
-    /></template>
-    <template v-else><SignupAmbassadorsView /></template>
+    <div>
+      <template v-if="route.path === '/sign-up/organization'">
+        <SignupOrganizationView
+      /></template>
+      <template v-else><SignupAmbassadorsView /></template>
+      <FooterNext />
+    </div>
   </div>
-  <FooterNext />
 </template>
