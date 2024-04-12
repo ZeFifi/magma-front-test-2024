@@ -104,6 +104,7 @@
     "lastname": "Last Name",
     "launch": "Launch",
     "login": "Login",
+    "logo": "Logo",
     "low": "Low",
     "lowCriteria": "Low criteria",
     "manage": "Manage",
@@ -228,7 +229,7 @@
         "heading": "✨ Welcome to Magma",
         "description": "Personalize the experience of your ambassadors and candidates by creating your own organisation.."
       },
-      "itemThree": {  
+      "itemThree": {
         "title": "Define your target",
         "heading": "🥳 Congratulations, your organisation is ready",
         "description": "Now define your priority target."
@@ -337,7 +338,10 @@
     "advice": "They will not be invited, and will <b>not receive any communication</b> before our welcome session.",
     "cta": "Add an ambassador",
     "description": "We recommend adding 3 to 5 ambassadors initially.",
-    "heading": "Who are your first ambassadors?"
+    "heading": "Who are your first ambassadors?",
+    "modal": {
+      "title": "Ajouter un ambassadeur"
+    }
   },
   "signupCriteriaView": {
     "advice": "Choose <b>the most important criteria</b> for you here. You can always modify it or add secondary ones later.",

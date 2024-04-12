@@ -104,6 +104,7 @@
     "lastname": "Nom",
     "launch": "Lancement",
     "login": "Connexion",
+    "logo": "Logo",
     "low": "Faible",
     "lowCriteria": "Critère faible",
     "manage": "Gérer",
@@ -228,7 +229,7 @@
         "heading": "✨ Bienvenue sur Magma",
         "description": "Personnalisez l’expérience de vos ambassadeurs et candidats en créant votre organisation."
       },
-      "itemThree": {  
+      "itemThree": {
         "title": "Définissez votre cible",
         "heading": "🥳 Félicitations, votre organisation est prête ",
         "description": "Définissez maintenant votre cible prioritaire."
@@ -337,7 +338,10 @@
     "advice": "Ils ne seront pas invités, et <b>ne recevront aucune communication</b> avant notre session d’accueil.",
     "cta": "Ajouter un ambassadeur",
     "description": "Nous vous recommandons d’ajouter 3 à 5 ambassadeurs dans un premier temps.",
-    "heading": "Qui sont vos premiers ambassadeurs ?"
+    "heading": "Qui sont vos premiers ambassadeurs ?",
+    "modal": {
+      "title": "Ajouter un ambassadeur"
+    }
   },
   "signupCriteriaView": {
     "advice": "Choisissez ici <b>le critère le plus important</b> pour vous. Vous pourrez toujours le modifier ou en ajouter des secondaires plus tard.",
