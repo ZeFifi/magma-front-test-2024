@@ -3,6 +3,7 @@
 import { useAmbassadorsStore } from "@/stores/ambassadors";
 import axios from "axios";
 import { BaseButton, BaseIcon, FieldInput } from "magma-design-system-test";
+import { computed } from "vue";
 
 // Variables
 const ambassadorsStore = useAmbassadorsStore();
@@ -23,6 +24,15 @@ interface Error {
 const emit = defineEmits<{
   (e: "close"): void;
 }>();
+
+// Checks if mandatory fields are filled
+const isDisabled = computed(() => {
+  return (
+    !ambassadorsStore.ambassadorFirstname ||
+    !ambassadorsStore.ambassadorLastname ||
+    !ambassadorsStore.ambassadorEmail
+  );
+});
 
 // Adds an ambassador to the organization and closes the modal
 const onAddAmbassador = async () => {
@@ -137,8 +147,8 @@ const updateAmbassadorEmail = (email: string) => {
           <BaseButton
             @click="onAddAmbassador"
             :text="$t('generic.add')"
-            custom-color="#444ce7"
-            state="prmr"
+            state="trtr"
+            :disabled="isDisabled"
           />
         </div>
       </div>
