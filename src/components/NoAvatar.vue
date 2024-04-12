@@ -18,7 +18,7 @@ const props = defineProps({
 
 // Gets initials from the ambassador firstname and lastname
 const getInitials = (firstname: string, lastname: string) => {
-  return firstname.charAt(0) + lastname.charAt(0);
+  return firstname.charAt(0).toUpperCase() + lastname.charAt(0).toUpperCase();
 };
 </script>
 
