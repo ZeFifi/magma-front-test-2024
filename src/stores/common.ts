@@ -5,23 +5,23 @@ export const useCommonStore = defineStore("common", {
   state: () => {
     return {
       alert: {
-        props: {},
+        props: {}
       },
       bulk: {
-        props: {},
+        props: {}
       },
       modal: {
-        props: {},
+        props: {}
       },
       selectedRows: {} as { [key: string]: boolean },
       shellModal: {
         name: "",
-        props: {},
+        props: {}
       },
       panel: {
         name: "",
-        props: {},
-      },
+        props: {}
+      }
     };
   },
 
@@ -34,8 +34,8 @@ export const useCommonStore = defineStore("common", {
     resetShellModal() {
       this.shellModal = {
         name: "",
-        props: {},
+        props: {}
       };
-    },
-  },
+    }
+  }
 });

@@ -15,7 +15,7 @@ export function useSignupRouting() {
       {
         name: "theSignupSidebar.navigation.itemFive",
         page: "signup-ambassadors"
-      },
+      }
     ];
 
     const currentIndex = steps.findIndex((step) => step.page === route?.name);

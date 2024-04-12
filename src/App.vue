@@ -1,8 +1,8 @@
 <script setup lang="ts">
 // NPM
+import { AxiosError } from "axios";
 import { onBeforeMount, onErrorCaptured, ref } from "vue";
 import { RouterView, useRoute } from "vue-router";
-import { AxiosError } from "axios";
 
 // Components
 import ErrorView from "@/views/ErrorView.vue";
