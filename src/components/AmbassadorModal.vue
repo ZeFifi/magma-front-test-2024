@@ -129,6 +129,7 @@ const updateAmbassadorEmail = (email: string) => {
             @update:modelValue="updateAmbassadorEmail"
             :label="$t('generic.email')"
             role="email"
+            icon="mail"
             placeholder="nelson.mandela@gmail.com"
             required
           />
