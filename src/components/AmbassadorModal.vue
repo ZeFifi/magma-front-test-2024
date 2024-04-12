@@ -48,6 +48,9 @@ const onAddAmbassador = async () => {
     );
     if (res.status === 200) {
       ambassadorsStore.allAmbassadors.push(res.data);
+      ambassadorsStore.setAmbassadorFirstname("");
+      ambassadorsStore.setAmbassadorLastname("");
+      ambassadorsStore.setAmbassadorEmail("");
     }
   } catch (error: ErrorTestCreateAmbassador | any) {
     if (axios.isAxiosError(error)) {
@@ -73,6 +76,7 @@ const updateAmbassadorLastname = (lastname: string) => {
 
 const updateAmbassadorEmail = (email: string) => {
   ambassadorsStore.setAmbassadorEmail(email);
+  return "";
 };
 </script>
 
