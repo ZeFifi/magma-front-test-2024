@@ -12,6 +12,7 @@ export default createI18n({
   locale: navigator.language.split("-")[0],
   messages: {
     en,
-    fr,
+    fr
   },
+  warnHtmlMessage: false
 });

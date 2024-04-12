@@ -13,8 +13,6 @@ const props = defineProps({
 
 <template>
   <div class="rounded-lg p-4 bg-background-warning-default mb-6">
-    <p class="text-sm">
-      {{ props.message }}
-    </p>
+    <p class="text-sm" v-html="props.message"></p>
   </div>
 </template>
