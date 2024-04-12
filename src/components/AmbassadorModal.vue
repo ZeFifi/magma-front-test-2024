@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // Imports
 import { useAmbassadorsStore } from "@/stores/ambassadors";
+import type { ErrorTestCreateAmbassador } from "@/types/Errors";
 import axios from "axios";
 import { BaseButton, BaseIcon, FieldInput } from "magma-design-system-test";
 import { computed } from "vue";
@@ -11,12 +12,6 @@ const ambassadorsStore = useAmbassadorsStore();
 const ambassadorFirstname = ambassadorsStore.ambassadorFirstname;
 const ambassadorLastname = ambassadorsStore.ambassadorLastname;
 const ambassadorEmail = ambassadorsStore.ambassadorEmail;
-
-interface Error {
-  error: true;
-  errorType: "ERROR-TEST-CREATE-AMBASSADOR";
-  message: string;
-}
 
 // Functions
 
@@ -54,7 +49,7 @@ const onAddAmbassador = async () => {
     if (res.status === 200) {
       ambassadorsStore.allAmbassadors.push(res.data);
     }
-  } catch (error: Error | any) {
+  } catch (error: ErrorTestCreateAmbassador | any) {
     if (axios.isAxiosError(error)) {
       // Axios related errors
       console.error("Axios Error :", error.message);

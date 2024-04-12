@@ -1,13 +1,6 @@
 // NPM
 import { defineStore } from "pinia";
 
-export interface Ambassador {
-  id: number;
-  firstname: string;
-  lastname: string;
-  email: string;
-}
-
 export const useAmbassadorsStore = defineStore("ambassadors", {
   state: () => ({
     organizationId: 0,

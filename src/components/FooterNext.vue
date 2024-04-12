@@ -2,6 +2,7 @@
 // Imports
 import { useAmbassadorsStore } from "@/stores/ambassadors";
 import { useSignupStore } from "@/stores/signup";
+import type { ErrorTestSignupOrganization } from "@/types/Errors";
 import axios from "axios";
 import { BaseButton } from "magma-design-system-test";
 import { computed } from "vue";
@@ -11,12 +12,6 @@ import { useRouter } from "vue-router";
 const signupStore = useSignupStore();
 const ambassadorsStore = useAmbassadorsStore();
 const router = useRouter();
-
-interface Error {
-  error: true;
-  errorType: "ERROR-TEST-SIGNUP-ORGANIZATION";
-  message: string;
-}
 
 // Functions
 
@@ -54,7 +49,7 @@ const onContinue = async () => {
       }
     );
     updateAmbassadorId(data.id);
-  } catch (error: Error | any) {
+  } catch (error: ErrorTestSignupOrganization | any) {
     if (axios.isAxiosError(error)) {
       // Axios related errors
       console.error("Axios Error :", error.message);

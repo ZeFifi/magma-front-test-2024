@@ -1,7 +1,9 @@
 <script setup lang="ts">
 // Imports
 import NoAvatar from "@/components/NoAvatar.vue";
-import { useAmbassadorsStore, type Ambassador } from "@/stores/ambassadors";
+import { useAmbassadorsStore } from "@/stores/ambassadors";
+import type { Ambassador } from "@/types/Ambassador";
+import type { ErrorTestDeleteAmbassador } from "@/types/Errors";
 import axios from "axios";
 import { BaseIcon } from "magma-design-system-test";
 import { defineProps } from "vue";
@@ -17,12 +19,6 @@ const props = defineProps({
 // Variables
 const ambassadorsStore = useAmbassadorsStore();
 
-interface Error {
-  error: true;
-  errorType: "ERROR-TEST-DELETE-AMBASSADOR";
-  message: string;
-}
-
 // Functions
 
 // Deletes an ambassador
@@ -37,7 +33,7 @@ const deleteAmbassador = async (ambassadorId: number) => {
       );
       ambassadorsStore.allAmbassadors.splice(index, 1);
     }
-  } catch (error: Error | any) {
+  } catch (error: ErrorTestDeleteAmbassador | any) {
     if (axios.isAxiosError(error)) {
       // Axios related errors
       console.error("Axios Error :", error.message);
