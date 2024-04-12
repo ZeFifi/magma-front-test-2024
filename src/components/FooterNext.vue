@@ -7,6 +7,7 @@ import axios from "axios";
 import { BaseButton } from "magma-design-system-test";
 import { computed } from "vue";
 import { useRouter } from "vue-router";
+import ProgressBar from "./shell/ProgressBar.vue";
 
 // Variables
 const signupStore = useSignupStore();
@@ -64,9 +65,8 @@ const onContinue = async () => {
 </script>
 
 <template>
-  <footer
-    class="fixed w-[calc(100%-496px)] h-[126px] bottom-0 bg-white border-t border-subtle p-10"
-  >
+  <ProgressBar class="fixed bottom-[126px]" />
+  <footer class="fixed w-[calc(100%-496px)] h-[126px] bottom-0 bg-white p-10">
     <div
       :class="[
         'flex',
